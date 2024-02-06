@@ -1,0 +1,19 @@
+Topics: More DOM manipulation,
+ Events Event Bubbling, HTML Forms ,Handle User Input.
+
+Task:Build a Tic-Tac-toe Game
+
+- User Story
+ -AS a user, I want to click on one the square and it should give x or an o
+ depending on who's turn 
+
+ -As a use, I want to click on the square after x has played, and it should show an o 
+ (in technical terms, alternate x's and o's on each click)
+
+ -As a User I Want to know whether it is a win lose or a draw based on the patterns on the board
+-Write HTML Elements
+ - Build the grid with 9+1 divs
+ -
+
+-write css
+- style divs to make them look like a grid
