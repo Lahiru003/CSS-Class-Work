@@ -27,7 +27,6 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 
   // Services Page Content
-  // Content for Custom Programming Service
 const programmingServiceText = "Offering tailored programming solutions that fit your business needs. Specializing in developing high-quality, maintainable code for a variety of applications.";
 
 const webDesignServiceText = "Crafting engaging and responsive website designs that provide a seamless user experience across all devices. Focusing on aesthetic appeal and usability.";
