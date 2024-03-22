@@ -15,4 +15,4 @@ LAB1: https://lahiru003.github.io/CSS-Class-Work/lab1/
 
 LAB2: https://lahiru003.github.io/CSS-Class-Work/lab2/
 
-LAB3: https://lahiru003.github.io/CSS-Class-Work/lab3/blog.html
+LAB3: https://lahiru003.github.io/CSS-Class-Work/Lab3/blog.html
