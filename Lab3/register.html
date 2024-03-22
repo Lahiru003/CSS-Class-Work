@@ -1,0 +1,48 @@
+<!-- 
+// author Pramuditha 
+// lAB 2 css
+// date 2/24/2024 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script defer src="./scripts/register.js"></script>
+    <script defer src="./scripts/app.js"></script>
+    <script src="./node_modules//bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="./style/style.css" />
+    <link
+      rel="stylesheet"
+      href="./node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="sylesheet"
+      href="./node_modules/font-awesome/css/font-awesome.min.css"
+    />
+    <title>Register Page</title>
+</head>
+<body>
+     <!-- navigation bar is taken from 
+    https://getbootstrap.com/docs/5.1/components/navbar/ -->
+    <script src="./scripts/topnav.js"></script>
+    <div class="form-container">
+        <form id="registerForm">
+            <label for="firstName">First Name:</label>
+            <input type="text" id="firstName" required>
+            <label for="lastName">Last Name:</label>
+            <input type="text" id="lastName" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" required>
+            <label for="password">Password:</label>
+            <input type="password" id="password" required>
+            <label for="confirmPassword">Confirm Password:</label>
+            <input type="password" id="confirmPassword" required>
+            <button type="submit" class="btn btn-primary">Register</button>
+        </form>
+        <p>Already have an account? <a href="login.html">Sign In</a></p>
+        <div id="ErrorMessage" class="hidden"></div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</body>
+</html>
