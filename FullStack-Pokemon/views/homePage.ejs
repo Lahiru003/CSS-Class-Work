@@ -1,0 +1,15 @@
+
+<%- include('partials/header.ejs')%>
+
+
+
+    <h1>Pokemon HomePage</h1>
+    <form class="search-form" action="/search" method="POST">
+        <input type="text" name="pokemonName" autocomplete="off" />
+        <input type="submit" value="Search Pokemon!" />
+    </form>
+
+
+
+
+<%- include('partials/footer.ejs')%>
