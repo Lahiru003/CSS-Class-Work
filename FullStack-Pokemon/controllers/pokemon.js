@@ -82,6 +82,26 @@ async function deletePokemonById(req, res) {
   }
 }
 
+async function editPokemonById(req, res) {
+    try {
+        const pokemon = await Pokemon.findById(req.params.id);
+        res.render("editPokemon.ejs", { pokemon });
+    } catch (err) {
+        console.error("Error with editing pokemon");
+        res.status(500).send("Error in editing pokemon");
+    }
+}
+
+async function updatePokemonById(req, res) {
+    try {
+        await Pokemon.findByIdAndUpdate(req.params.id, req.body);
+        res.redirect("/savedCollection");
+    } catch (err) {
+        console.error("Error with updating pokemon");
+        res.status(500).send("Error in updating pokemon");
+    }
+}
+
 module.exports = {
   deletePokemonById,
   getMyCollection,
@@ -90,6 +110,8 @@ module.exports = {
   searchPokemon,
   savePokemonToCollection,
   getAllPokemons,
+  editPokemonById,
+  updatePokemonById,
 };
 
 // DUE Monday April 8th @ 11:59 PM

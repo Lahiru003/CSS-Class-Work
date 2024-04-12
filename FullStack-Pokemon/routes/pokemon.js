@@ -19,6 +19,9 @@ router.post("/deletePokemon/:idOfPokemon", pokemonController.deletePokemonById);
 
 router.get("/pokemonList", pokemonController.getAllPokemons);
 
+router.get("/editPokemon/:id", pokemonController.editPokemonById);
+router.post("/updatePokemon/:id", pokemonController.updatePokemonById);
+
 // Share the router with others
 // CommonJS Syntax
 module.exports = router;
