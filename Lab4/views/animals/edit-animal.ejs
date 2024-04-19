@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Animal</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-4">
+        <h1>Edit Animal</h1>
+        <form action="/animals/edit/<%= animal._id %>" method="POST">
+            <div class="mb-3">
+                <label for="Zoo" class="form-label">Zoo:</label>
+                <input type="text" id="Zoo" name="Zoo" required value="<%= animal.Zoo %>" class="form-control">
+            </div>
+            <div class="mb-3">
+                <label for="ScientificName" class="form-label">Scientific Name:</label>
+                <input type="text" id="ScientificName" name="ScientificName" required value="<%= animal.ScientificName %>" class="form-control">
+            </div>
+            <div class="mb-3">
+                <label for="CommonName" class="form-label">Common Name:</label>
+                <input type="text" id="CommonName" name="CommonName" required value="<%= animal.CommonName %>" class="form-control">
+            </div>
+            <div class="mb-3">
+                <label for="GivenName" class="form-label">Given Name:</label>
+                <input type="text" id="GivenName" name="GivenName" required value="<%= animal.GivenName %>" class="form-control">
+            </div>
+            <div class="mb-3">
+                <label for="Gender" class="form-label">Gender:</label>
+                <select id="Gender" name="Gender" required class="form-select">
+                    <option value="Male" <% if (animal.Gender === 'Male') { %>selected<% } %>>Male</option>
+                    <option value="Female" <% if (animal.Gender === 'Female') { %>selected<% } %>>Female</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="DateOfBirth" class="form-label">Date of Birth:</label>
+                <input type="date" class="form-control" id="DateOfBirth" name="DateOfBirth" required value="<%= animal.DateOfBirth ? new Date(animal.DateOfBirth).toISOString().split('T')[0] : '' %>">
+            </div>
+            <div class="mb-3">
+                <label for="Age" class="form-label">Age:</label>
+                <input type="number" id="Age" name="Age" required value="<%= animal.Age %>" class="form-control">
+            </div>
+            <div class="mb-3">
+                <label for="IsTransportable" class="form-label">Is Transportable:</label>
+                <input type="checkbox" id="IsTransportable" name="IsTransportable" <%= animal.IsTransportable ? 'checked' : '' %> class="form-check-input">
+            </div>
+            <button type="submit" class="btn btn-primary">Update Animal Record</button>
+        </form>
+        <form action="/animals/delete/<%= animal._id %>" method="POST" class="mt-2">
+            <button type="submit" class="btn btn-danger">Delete Record</button>
+        </form>        
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

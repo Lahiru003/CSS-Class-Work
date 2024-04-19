@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animal Information Form</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+</head>
+<%- include('../partials/_navbar.ejs')%>
+<body>
+    <div class="container mt-4">
+        <h2>Animal Information Form</h2>
+        <form action="/animals/add" method="POST">
+            <div class="mb-3">
+                <label for="Zoo" class="form-label">Home Zoo</label>
+                <input type="text" class="form-control" id="Zoo" name="Zoo" required>
+            </div>
+            <div class="mb-3">
+                <label for="ScientificName" class="form-label">Scientific Name</label>
+                <input type="text" class="form-control" id="ScientificName" name="ScientificName" required>
+            </div>
+            <div class="mb-3">
+                <label for="CommonName" class="form-label">Common Name</label>
+                <input type="text" class="form-control" id="CommonName" name="CommonName" required>
+            </div>
+            <div class="mb-3">
+                <label for="GivenName" class="form-label">Given Name</label>
+                <input type="text" class="form-control" id="GivenName" name="GivenName" required>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Gender</label>
+                <div>
+                    <input type="radio" id="male" name="Gender" value="Male">
+                    <label for="male">Male</label>
+                    <input type="radio" id="female" name="Gender" value="Female">
+                    <label for="female">Female</label>
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="DateOfBirth" class="form-label">Date of Birth</label>
+                <input type="date" class="form-control" id="DateOfBirth" name="DateOfBirth" required>
+            </div>
+            <div class="mb-3">
+                <label for="Age" class="form-label">Age</label>
+                <input type="number" class="form-control" id="Age" name="Age" required>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Is Transportable</label>
+                <div>
+                    <input type="radio" id="available" name="IsTransportable" value="true">
+                    <label for="available">Available</label>
+                    <input type="radio" id="unavailable" name="IsTransportable" value="false">
+                    <label for="unavailable">Unavailable</label>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary">Add Animal to Database</button>
+            <button type="reset" class="btn btn-secondary">Reset Form</button>
+        </form>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
